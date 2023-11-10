@@ -1,0 +1,235 @@
+/** {
+    border: 1px solid rgb(255, 230, 230);
+}*/
+html{
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0px;
+    background: rgb(0,0,0);
+    background: linear-gradient(66deg, rgba(0,0,0,1) 0%, rgba(0,107,232,1) 23%, rgba(0,0,0,1) 49%, rgba(0,117,255,1) 66%, rgba(1,1,1,1) 83%, rgba(0,100,215,1) 94%);
+    color:rgb(185, 185, 185);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    padding: 10px;
+    background: rgb(6,7,10);
+    background: radial-gradient(circle, rgba(6,7,10,1) 0%, rgba(43,100,172,0.9920343137254902) 45%, rgba(4,4,3,1) 100%);
+    border: 1px inset lightsteelblue;
+    border-radius: 5px;
+}
+
+h1{
+    color: rgb(31, 173, 255);
+    text-align: center;
+    margin: 5px 5px;
+    font-family: 'Seymour One', sans-serif;
+}
+
+h1 ~ p{
+    color: rgb(31, 173, 255);
+    text-align: center;
+    margin: 5px 5px;
+}
+
+a {
+    color:rgb(221, 245, 221);
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section{
+    /*border: 1px solid blanchedalmond;*/
+    padding: 13px;
+}
+
+summary{
+    color: rgb(218, 164, 29);
+    cursor:pointer;
+}
+
+section div h2{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(198, 198, 199);
+}
+
+.principal-c, .sobreMi-c {
+    background: linear-gradient(rgba(0, 0, 0, 0.795),rgba(0, 0, 0, 0.589)), url("../img/paisajeNocturno.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.habilidades-c, .aficiones-c{
+    background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.507)), url("../img/paisajeDiurno.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.proyectos-c, .contacto-c{
+    background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.507)), url("../img/buhoFondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.principal-c{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil-c {
+    margin: 10px;
+}
+
+.perfil-c > h2{
+    text-align: center;
+}
+
+.perfil-c > p{
+    text-align: justify;
+}
+
+.logoPrincipal{
+    border: 1px solid rgb(38, 50, 83);
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    }
+
+.fotoDePerfil{
+    border: 3px solid rgb(124, 159, 170);
+    max-width: 140px;
+    border-radius: 400px;
+}
+
+.navegacion > li:hover{
+    font-size: 17px;
+    width: auto;
+}
+
+.btn-close{
+    align-items: center;
+    text-align: center;
+}
+
+.navbar{
+    position:sticky;
+    top: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(117deg, rgba(0,0,0,1) 0%, rgba(62,136,222,1) 100%);
+    backdrop-filter: blur(1px);
+    padding: 0px 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.btn-c, .btn {
+    background-color:rgba(245, 245, 220, 0);
+    border: none;
+    font-size: 40px;
+    color: rgb(196, 217, 235);
+    cursor:pointer;
+}
+
+.navegacion{
+    padding: 1px;
+    list-style-type: none;
+    display: flex;
+}
+
+.skills{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 20px;
+grid-template-rows: repeat(2, 1fr);
+}
+
+.skill-item{
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px;
+    width: 150px;
+    text-align: center;
+}
+
+.skill-item span{
+font-size: 40px;
+}
+
+@media (max-width: 768px){
+    .btn-close{
+        /* position: fixed;
+        width: 100%;
+        height: 220%;*/
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        padding: 5px;
+        background-color: rgba(14, 64, 138, 0.911);
+        box-shadow: 8px 6px 25px 8px rgb(75, 125, 224);
+        transition: left .4s ease-in-out;
+    }
+
+    .navegacion{
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 0px;
+    }
+
+    .btn--cerrar{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .show--menu {
+        left: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .btn-c, .btn{
+        display: none;
+    }
+
+    .navbar{
+        display: grid;
+        height: 100px;
+        grid-template-columns: 20% 80%;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .logoPrincipal{
+        height: 90px;
+        width: 140px;
+    }
+
+
+}
